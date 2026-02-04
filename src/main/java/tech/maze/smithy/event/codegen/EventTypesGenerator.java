@@ -8,11 +8,11 @@ import software.amazon.smithy.model.Model;
 import software.amazon.smithy.model.node.ObjectNode;
 import software.amazon.smithy.model.node.StringNode;
 import software.amazon.smithy.model.shapes.Shape;
+import software.amazon.smithy.model.shapes.ShapeId;
 import software.amazon.smithy.model.traits.Trait;
-import software.amazon.smithy.model.traits.TraitId;
 
 public final class EventTypesGenerator {
-  private static final TraitId EVENT_TRAIT_ID = TraitId.from("tech.maze.events#event");
+  private static final ShapeId EVENT_TRAIT_ID = ShapeId.from("tech.maze.events#event");
 
   void generate(PluginContext context) {
     final ObjectNode settings = context.getSettings();
@@ -34,7 +34,7 @@ public final class EventTypesGenerator {
   private Map<String, String> collectEventTypes(Model model) {
     final Map<String, String> eventTypes = new TreeMap<>();
 
-    for (Shape shape : model.getShapes()) {
+    for (Shape shape : model.shapes().toList()) {
       if (!shape.hasTrait(EVENT_TRAIT_ID)) {
         continue;
       }
