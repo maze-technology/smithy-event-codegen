@@ -39,7 +39,7 @@ public final class EventTypesGenerator {
         continue;
       }
 
-      final Trait trait = shape.getTrait(EVENT_TRAIT_ID).orElse(null);
+      final Trait trait = shape.getAllTraits().get(EVENT_TRAIT_ID);
       if (trait == null) {
         continue;
       }
