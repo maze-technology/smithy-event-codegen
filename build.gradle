@@ -1,0 +1,63 @@
+plugins {
+  id("java-library")
+  id("maven-publish")
+}
+
+group = "tech.maze"
+
+ext {
+  smithyVersion = "1.58.0"
+}
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+}
+
+dependencies {
+  implementation "software.amazon.smithy:smithy-build:$smithyVersion"
+  implementation "software.amazon.smithy:smithy-model:$smithyVersion"
+}
+
+jar {
+  enabled = true
+  archiveClassifier = ""
+
+  manifest {
+    attributes(
+      "Implementation-Title": project.name,
+      "Implementation-Version": project.version,
+    )
+  }
+}
+
+java {
+  withSourcesJar()
+}
+
+publishing {
+  publications {
+    maven(MavenPublication) {
+      from components.java
+    }
+  }
+
+  repositories {
+    maven {
+      name = "github"
+      url = "https://maven.pkg.github.com/" + System.getenv("GITHUB_REPOSITORY")
+
+      credentials {
+        username = System.getenv("GITHUB_USERNAME")
+        password = System.getenv("GITHUB_TOKEN")
+      }
+    }
+  }
+}
+
+tasks.register("printCoordinates") {
+  doLast {
+    println("group=${project.group}")
+    println("artifactId=${project.name}")
+  }
+}
