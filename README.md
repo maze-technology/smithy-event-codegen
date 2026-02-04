@@ -1,5 +1,16 @@
 # smithy-event-codegen
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=maze-technology_smithy-event-codegen&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=maze-technology_smithy-event-codegen)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=maze-technology_smithy-event-codegen&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=maze-technology_smithy-event-codegen)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=maze-technology_smithy-event-codegen&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=maze-technology_smithy-event-codegen)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=maze-technology_smithy-event-codegen&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=maze-technology_smithy-event-codegen)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=maze-technology_smithy-event-codegen&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=maze-technology_smithy-event-codegen)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=maze-technology_smithy-event-codegen&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=maze-technology_smithy-event-codegen)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=maze-technology_smithy-event-codegen&metric=coverage)](https://sonarcloud.io/summary/new_code?id=maze-technology_smithy-event-codegen)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=maze-technology_smithy-event-codegen&metric=bugs)](https://sonarcloud.io/summary/new_code?id=maze-technology_smithy-event-codegen)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=maze-technology_smithy-event-codegen&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=maze-technology_smithy-event-codegen)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=maze-technology_smithy-event-codegen&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=maze-technology_smithy-event-codegen)
+
 Smithy build plugin that generates Java constants for `@event` traits.
 
 ## What It Generates
