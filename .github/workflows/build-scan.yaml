@@ -34,7 +34,7 @@ jobs:
       packages: read
       pull-requests: write
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Cache SDKMAN
         uses: actions/cache@v5
