@@ -6,7 +6,7 @@ plugins {
 group = "tech.maze"
 
 ext {
-  smithyVersion = "1.72.0"
+  smithyVersion = "1.72.1"
 }
 
 repositories {
