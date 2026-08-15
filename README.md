@@ -68,12 +68,13 @@ Add the plugin JAR to Smithy build dependencies and enable it in `smithy-build.j
 ./gradlew build
 ```
 
-### Publish (GitHub Packages)
+### Publish (GitLab Package Registry)
 
 Set the following environment variables:
 
-- `GITHUB_USERNAME` (use `x-access-token` in CI)
-- `GITHUB_TOKEN` (PAT with `read:packages` + `write:packages`)
+- `GITLAB_MAVEN_USER` (default `gitlab-ci-token`) (use `x-access-token` in CI)
+- `GITLAB_TOKEN` (PAT with `read_api` + `read_package_registry`; CI uses `CI_JOB_TOKEN` to publish)
+- Optional: `GITLAB_MAVEN_URL`, `GITLAB_MAVEN_USER`, `GITLAB_MAVEN_PASSWORD` (group Deploy Token for local reads)
 - `GITHUB_REPOSITORY` (e.g. `maze-technology/smithy-event-codegen`)
 
 Then publish:
